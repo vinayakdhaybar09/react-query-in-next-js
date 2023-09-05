@@ -1,3 +1,30 @@
+## UNDERSTANDING
+
+- in next js app router every file or a component rendering is a server side.
+- when we write "use client" in the top of the file that file or component will render on a client side.
+
+
+- first created ReactQueryProvider file to wrap children inside react query provider.
+- because it is client side rendering.
+- then inside layout.tsx wrap whole app inside ReactQueryProvider.
+
+- <ReactQueryProvider>{children}</ReactQueryProvider>
+
+- then inside page.tsx created function for fetching api also exporting this function.
+
+- inside page.tsx calling the faction and passing the userdata as a props to Hero.tsx components.
+
+- we can't pass function as a props thats whay i am exporting it
+
+- inside hero.tsx file userData is pass to reactquery as a initial state.
+
+- react-query is used for caching data and it uses react hooks that why we need to write "use client" at the top.
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
